@@ -1,0 +1,20 @@
+#record-btn {
+  position: relative;
+  background-color: #8ed8fa; 
+  border-radius: 30px;
+  font-size: 24px;
+  color: #282c34;
+  line-height: 42px;
+  -webkit-transition: none;
+  transition: none;
+  box-shadow: 0 3px 0 #bcd2fa;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+}
+#record-btn:hover {
+  top: -4px;
+  box-shadow: 0 7px 0 #bcd2fa;
+}
+#record-btn:active {
+  top: 3px;
+  box-shadow: none;
+}
