@@ -1,11 +1,12 @@
 import React from "react";
-
+import Read from "../../favorites/containers/read";
 class Records extends React.Component {
 
   render() {
     return (
       <div>
-        <h2>Records(記録する)</h2>
+        <Read />
+        <button>仲間ポケモン記録</button>
       </div>
     );
   }

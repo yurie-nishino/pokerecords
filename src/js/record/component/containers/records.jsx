@@ -1,7 +1,6 @@
 import React from "react";
-// import './App.css';
 import Records from "../records";
-
+import Compatibility from "../compatibility";
 class Record extends React.Component {
 
 
@@ -10,6 +9,7 @@ class Record extends React.Component {
       <div className="App">
         <header className="App-header">
           <Records />
+          <Compatibility />
         </header>
       </div>
     );

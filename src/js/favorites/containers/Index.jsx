@@ -1,27 +1,27 @@
 import React from "react";
-import Home from "./js/home/component/home";
-import Record from "./js/record/component/containers/records";
+import Home from "../../home/component/home";
+import Favorites from "../component/favorites";
 
-class Body extends React.Component {
+class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isRecoedDisplayActive: false,
+      isActive: false,
     };
     this.toggleActive = this.toggleActive.bind(this);
   }
 
   toggleActive() {
     this.setState({
-      isRecoedDisplayActive: !this.state.isRecoedDisplayActive,
+      isActive: !this.state.isActive,
     });
   }
 
   render() {
     return (
       <div>
-        {this.state.isRecoedDisplayActive ? (
-          <Record />
+        {this.state.isActive ? (
+          <Favorites />
         ) : (
           <Home toggleActive={this.toggleActive} />
         )}
@@ -30,4 +30,5 @@ class Body extends React.Component {
   }
 }
 
-export default Body;
+export default Index;
+
