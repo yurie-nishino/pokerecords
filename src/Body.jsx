@@ -1,27 +1,29 @@
 import React from "react";
-import Home from "./js/home/component/home";
-import Record from "./js/record/component/containers/records";
-
+import Home from "./js/home/component/Home";
+import Menu from "./js/record/component/containers/Menu";
 class Body extends React.Component {
   constructor(props) {
+    console.log("toggleActive1");
     super(props);
     this.state = {
-      isRecoedDisplayActive: false,
+      isRecordDisplayActive: false,
     };
-    this.toggleActive = this.toggleActive.bind(this);
+    this.toggleActive = this.toggleActive.bind(this); 
   }
 
   toggleActive() {
+    console.log("toggleActive2");
     this.setState({
-      isRecoedDisplayActive: !this.state.isRecoedDisplayActive,
+      isRecordDisplayActive: !this.state.isRecordDisplayActive,
     });
   }
 
   render() {
+    console.log("toggleActive3");
     return (
       <div>
-        {this.state.isRecoedDisplayActive ? (
-          <Record />
+        {this.state.isRecordDisplayActive ? (
+          <Menu />
         ) : (
           <Home toggleActive={this.toggleActive} />
         )}

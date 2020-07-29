@@ -1,7 +1,7 @@
 import React from "react";
-import Records from "../records";
-import Compatibility from "../compatibility";
-class Record extends React.Component {
+import Records from "../Records";
+import Compatibility from "../Compatibility";
+class Menu extends React.Component {
 
 
   render() {
@@ -15,4 +15,4 @@ class Record extends React.Component {
     );
   }
 }
-export default Record;
+export default Menu;

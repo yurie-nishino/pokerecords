@@ -1,6 +1,6 @@
 import React from "react";
-import Home from "../../home/component/home";
-import Favorites from "../component/favorites";
+import Favorites from "../component/Favorites";
+import Records from "../../record/component/Records";
 
 class Index extends React.Component {
   constructor(props) {
@@ -8,10 +8,10 @@ class Index extends React.Component {
     this.state = {
       isActive: false,
     };
-    this.toggleActive = this.toggleActive.bind(this);
+    this.favoritesActive = this.favoritesActive.bind(this);
   }
 
-  toggleActive() {
+  favoritesActive() {
     this.setState({
       isActive: !this.state.isActive,
     });
@@ -23,7 +23,7 @@ class Index extends React.Component {
         {this.state.isActive ? (
           <Favorites />
         ) : (
-          <Home toggleActive={this.toggleActive} />
+          <Records favoritesActive={this.favoritesActive} />
         )}
       </div>
     );
