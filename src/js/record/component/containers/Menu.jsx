@@ -5,6 +5,7 @@ class Menu extends React.Component {
 
 
   render() {
+    console.log('-----------');
     return (
       <div className="App">
         <header className="App-header">
