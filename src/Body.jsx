@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./js/home/component/Home";
+import Home from "./js/home/component/home";
 import Menu from "./js/record/component/Menu";
 class Body extends React.Component {
   constructor(props) {
@@ -22,6 +22,8 @@ class Body extends React.Component {
   }
 
   render() {
+    console.log('----------');
+    console.log(this.state.isRecordDisplayActive);
     return (
       <div>
         {this.state.isRecordDisplayActive ? (
