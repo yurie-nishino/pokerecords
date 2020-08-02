@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./js/home/component/Home";
-import Menu from "./js/record/component/containers/Menu";
+import Menu from "./js/record/component/Menu";
 class Body extends React.Component {
   constructor(props) {
     console.log("toggleActive1");
@@ -20,7 +20,7 @@ class Body extends React.Component {
     console.log("toggleActive2_1");
     console.log(this.state.isRecordDisplayActive);
   }
-  
+
   render() {
     return (
       <div>
