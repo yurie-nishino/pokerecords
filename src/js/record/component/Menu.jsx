@@ -1,6 +1,6 @@
 import React from "react";
-import Records from "./Records";
-import Compatibility from "./Compatibility";
+import Records from "./records";
+import Compatibility from "./compatibility";
 class Menu extends React.Component {
 
 

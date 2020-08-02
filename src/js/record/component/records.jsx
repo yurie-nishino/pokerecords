@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./Records.module.css";
+import css from "./records.module.css";
 
 class Records extends React.Component {
 
