@@ -1,9 +1,11 @@
 import React from "react";
 import Favorites from "../component/Favorites";
-import Records from "../../record/component/Records";
+import Menu from "../containers/Menu.jsx";
+// import Records from "../../record/component/Records";
 
 class Index extends React.Component {
   constructor(props) {
+    console.log("start");
     super(props);
     this.state = {
       isActive: false,
@@ -12,18 +14,20 @@ class Index extends React.Component {
   }
 
   favoritesActive() {
+    console.log("index1");
     this.setState({
       isActive: !this.state.isActive,
     });
   }
 
   render() {
+    console.log("index2");
     return (
       <div>
         {this.state.isActive ? (
           <Favorites />
         ) : (
-          <Records favoritesActive={this.favoritesActive} />
+          <Menu favoritesActive={this.favoritesActive} />
         )}
       </div>
     );

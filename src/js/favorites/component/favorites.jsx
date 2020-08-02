@@ -2,6 +2,7 @@ import React from "react";
 class Favorites extends React.Component {
 
   render() {
+    console.log("index3");
     return (
       <div>
         <p>仲間ポケモン記録</p>
