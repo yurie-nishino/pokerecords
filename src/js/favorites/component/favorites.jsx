@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./favorites.module.css";
+import Friends from "./friends";
 
 class Favorites extends React.Component {
 
@@ -7,7 +7,7 @@ class Favorites extends React.Component {
     console.log("index3");
     return (
       <div>
-        <p>仲間ポケモン記録</p>
+        <Friends />
         <p>ポケモン一覧</p>
         <p>捕まえた場所</p>
         <p>使ったモンスターボール</p>

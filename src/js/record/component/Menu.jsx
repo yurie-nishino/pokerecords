@@ -1,6 +1,7 @@
 import React from "react";
 import Records from "./records";
 import Compatibility from "./compatibility";
+import Index from "./index";
 import Read from "../../favorites/containers/Read";
 
 class Menu extends React.Component {
@@ -23,13 +24,14 @@ class Menu extends React.Component {
     console.log("-----------");
     const { isActive } = this.state;
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="Menu">
+        <header className="Menu-header">
           {isActive ? (
             <Read />
           ) : (
             <React.Fragment>
               <Records favoritesActive={this.favoritesActive} />
+              <Index />
               <Compatibility />
             </React.Fragment>
           )}

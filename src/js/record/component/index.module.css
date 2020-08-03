@@ -1,4 +1,4 @@
-.fav_btn{
+.index_btn{
   background-color:white;
   color: black;
   border: 2px solid;
@@ -6,11 +6,11 @@
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease 0.3s ;
-  padding:10px 40px ;
+  padding:10px 65px ;
   margin-bottom: 35px;
 }
 
-.fav_btn:hover{
+.index_btn:hover{
   background-color: black;
   color: white;
 }
