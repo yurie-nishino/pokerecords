@@ -1,12 +1,16 @@
-import React from 'react';
+import React from "react";
+import css from "./records.module.css";
 
-class Record extends React.Component{
-    render(){
-    return(
+class Records extends React.Component {
+
+  render() {
+    console.log("index4");
+    console.log(this.props)
+    return (
       <div>
-        <h2>Records</h2>
+        <button onClick={this.props.favoritesActive} className={css.fav_btn}>仲間ポケモン記録</button>
       </div>
     );
   }
 }
-export default Record;
+export default Records;

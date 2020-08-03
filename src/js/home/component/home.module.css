@@ -1,4 +1,4 @@
-#record-btn {
+.record_btn {
   position: relative;
   background-color: #8ed8fa; 
   border-radius: 30px;
@@ -10,11 +10,11 @@
   box-shadow: 0 3px 0 #bcd2fa;
   text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
 }
-#record-btn:hover {
+.record_btn:hover {
   top: -4px;
   box-shadow: 0 7px 0 #bcd2fa;
 }
-#record-btn:active {
+.record_btn:active {
   top: 3px;
   box-shadow: none;
 }
