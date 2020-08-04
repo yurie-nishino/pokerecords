@@ -6,7 +6,7 @@ class Index extends React.Component {
   render() {
     return (
       <div className = {css.menu}>
-        <button className = {css.index_btn}>仲間ポケモン一覧</button>
+        <button onClick = {this.props.favoritesActive} className = {css.index_btn}>仲間ポケモン一覧</button>
       </div>
     );
   }

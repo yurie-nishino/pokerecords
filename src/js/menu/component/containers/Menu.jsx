@@ -31,7 +31,7 @@ class Menu extends React.Component {
           ) : (
             <React.Fragment>
                 <Records favoritesActive={this.favoritesActive} />
-                <Index />
+                <Index favoritesActive={this.favoritesActive}/>
                 <Compatibility />
             </React.Fragment>
           )}

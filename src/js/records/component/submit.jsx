@@ -1,15 +1,14 @@
 import React from "react";
 import css from "./record.module.css";
 
-class Place extends React.Component {
+class  Submit extends React.Component {
 
   render() {
     return (
       <div className = {css.record}>
-        <p>捕まえた場所</p>
-        <input /> 
+        <input type='submit' value='送信' /> 
       </div>
     );
   }
 }
-export default Place;
+export default Submit;

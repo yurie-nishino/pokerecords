@@ -1,10 +1,6 @@
 import React from "react";
 import Friends from "./friends";
-import Name from "./name";
-import Image from "./image";
-import Place from "./place";
-import BallType from "./ballType";
-import BallCount from "./ballCount";
+import Form from "./form";
 
 class Favorites extends React.Component {
 
@@ -12,12 +8,8 @@ class Favorites extends React.Component {
     console.log("index3");
     return (
       <React.Fragment>
-        <Friends />
-        <Name />
-        <Image />
-        <Place />
-        <BallType />
-        <BallCount />
+          <Friends />
+          <Form />
       </React.Fragment>
     );
   }
