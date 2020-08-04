@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./js/home/component/home";
-import Menu from "./js/record/component/containers/Menu";
+import Menu from "./js/menu/component/containers/Menu";
 class Body extends React.Component {
   constructor(props) {
     console.log("toggleActive1");
