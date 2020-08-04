@@ -1,12 +1,12 @@
 import React from "react";
-import css from "./friends.module.css";
+import css from "./record.module.css";
 
 class Friends extends React.Component {
 
   render() {
     return (
       <div>
-        <h2 className = {css.friends}>仲間ポケモン記録</h2>
+        <h2 className = {css.record}>仲間ポケモン記録</h2>
       </div>
     );
   }

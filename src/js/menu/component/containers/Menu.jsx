@@ -24,15 +24,15 @@ class Menu extends React.Component {
     console.log("-----------");
     const { isActive } = this.state;
     return (
-      <div className="Menu">
-        <header className="Menu-header">
+      <div>
+        <header>
           {isActive ? (
             <Read />
           ) : (
             <React.Fragment>
-              <Records favoritesActive={this.favoritesActive} />
-              <Index />
-              <Compatibility />
+                <Records favoritesActive={this.favoritesActive} />
+                <Index />
+                <Compatibility />
             </React.Fragment>
           )}
         </header>
