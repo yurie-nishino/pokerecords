@@ -1,5 +1,5 @@
 import React from "react";
-import Favorites from "../component/favorites";
+import Favorites from "../../../favorites/component/favorites";
 
 class Index extends React.Component {
   render() {

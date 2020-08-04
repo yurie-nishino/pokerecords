@@ -1,8 +1,8 @@
 import React from "react";
-import Records from "./records";
-import Compatibility from "./compatibility";
-import Index from "./index";
-import Read from "../../favorites/containers/Read";
+import Records from "../records";
+import Compatibility from "../compatibility";
+import Index from "../index";
+import Read from "./Read";
 
 class Menu extends React.Component {
   constructor(props) {

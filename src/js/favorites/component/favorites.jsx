@@ -6,13 +6,19 @@ class Favorites extends React.Component {
   render() {
     console.log("index3");
     return (
-      <div>
+      <React.Fragment>
         <Friends />
-        <p>ポケモン一覧</p>
+        <p>名前（種類）</p>
+        <input />
+        <p>写真</p>
+        <input type="file" id="file-input" name="ImageStyle"/>
         <p>捕まえた場所</p>
-        <p>使ったモンスターボール</p>
-        <p>捕まえた数</p>
-      </div>
+        <input /> 
+        <p>使ったモンスターボールの種類</p> 
+        <input /> 
+        <p>使ったモンスターボールの数</p>
+        <input />
+      </React.Fragment>
     );
   }
 }
