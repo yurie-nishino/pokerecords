@@ -5,7 +5,7 @@ class Compatibility extends React.Component {
   render() {
     return (
       <div className = {css.menu}>
-        <button className = {css.vs_btn}>バトル相性診断</button>
+        <button onClick={this.props.battleActive} className = {css.vs_btn}>バトル相性診断</button>
       </div>
     );
   }

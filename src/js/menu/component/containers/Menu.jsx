@@ -4,6 +4,7 @@ import Compatibility from "../compatibility";
 import Index from "../index";
 import Read from "./Read";
 import PokeIndex from "../../../index/component/pokeIndex";
+import Combination from "../../../battle/component/combination";
 
 class Menu extends React.Component {
   // 初期値設定
@@ -12,9 +13,11 @@ class Menu extends React.Component {
     this.state = {
       isActive: false,
       isIndex: false,
+      isBattle: false,
     };
     this.favoritesActive = this.favoritesActive.bind(this);
     this.indexActive = this.indexActive.bind(this);
+    this.battleActive = this.battleActive.bind(this);
   }
 
   favoritesActive() {
@@ -33,11 +36,21 @@ class Menu extends React.Component {
     });
   }
 
+  battleActive() {
+    console.log("test2");
+    // ボタン押した時（true）
+    this.setState({
+      isBattle: !this.state.isBattle
+    });
+  }
+
+
   render() {
     // 結果を返す
     console.log("-----------");
     const { isActive } = this.state;
     const { isIndex} = this.state;
+    const { isBattle} = this.state;
     return (
       <div>
         <header>
@@ -47,11 +60,14 @@ class Menu extends React.Component {
           {isIndex ? (
             <PokeIndex />
           ) : null}
-          {!isIndex && !isActive ? (
+          {isIndex ? (
+            <Combination />
+          ) : null}
+          {!isIndex && !isActive && !isBattle ? (
             <React.Fragment>
                 <Records favoritesActive={this.favoritesActive} />
                 <Index indexActive={this.indexActive}/>
-                <Compatibility />
+                <Compatibility battleActive={this.battleActive} />
             </React.Fragment>
           ) : null}
         </header>
