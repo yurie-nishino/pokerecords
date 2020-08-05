@@ -11,20 +11,23 @@ class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isActive: false,
+      isActive: false, //何も押してないからfalse
       isIndex: false,
       isBattle: false,
     };
-    this.favoritesActive = this.favoritesActive.bind(this);
+    //変数を定義↓
+    this.favoritesActive = this.favoritesActive.bind(this); //bindとはkey名？？
     this.indexActive = this.indexActive.bind(this);
     this.battleActive = this.battleActive.bind(this);
   }
 
   favoritesActive() {
+    //関数
     console.log("test1");
     // ボタン押した時（true）
     this.setState({
-      isActive: !this.state.isActive,
+      //変更する値（プロパティ）
+      isActive: !this.state.isActive, // !は反転
     });
   }
 
