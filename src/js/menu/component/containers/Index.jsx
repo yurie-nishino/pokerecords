@@ -9,8 +9,8 @@ class Index extends React.Component {
     return (
       <React.Fragment>
         <Favorites />
-        <PokeIndex />
-        <Combination />
+        {/* <PokeIndex /> */}
+        {/* <Combination /> */}
       </React.Fragment>
     );
   }
