@@ -1,31 +1,31 @@
 import React from "react";
-import css from "./record.module.css";
+// import css from "./record.module.css";
+import css from "./form.module.css";
+
 
 class Form  extends React.Component {
 
   render() {
+    console.log(this.props);
     return (
-      <div className = {css.record}>
+      <div className={css.form_box}>
         <form>
           <p>名前（種類）</p>
-          <input />
+          <input type="text" className={css.textbox}/>
 
           <p>写真</p>
-          <input type="file" id="file-input" name="ImageStyle"/>
+          <input onChange={file => this.props.onFileSelect(file)} type="file" id="file-input"/>
 
           <p>捕まえた場所</p>
-          <input /> 
+          <input type="text" className={css.textbox}/> 
 
           <p>使ったモンスターボールの種類</p> 
-          <input /> 
+          <input type="text" className={css.textbox}/> 
 
           <p>使ったモンスターボールの数</p>
-          <input />
+          <input type="text" className={css.textbox}/>
 
-          <input
-            type='submit'
-            value='送信'
-          />
+          <input type='submit' value='送信' className={css.submit_btn} />
         </form>
       </div>
     );

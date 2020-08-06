@@ -1,4 +1,5 @@
 import React from "react";
+
 class PokeIndex extends React.Component {
   render() {
     console.log("index2");

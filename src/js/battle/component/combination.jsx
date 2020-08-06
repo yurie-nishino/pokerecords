@@ -1,7 +1,6 @@
 import React from "react";
 
 class Combination extends React.Component {
-
   render() {
     return (
       <div >
