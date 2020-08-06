@@ -2,7 +2,7 @@ import React from "react";
 import Records from "../records";
 import Compatibility from "../compatibility";
 import Index from "../index";
-import Read from "./Read";
+import Favorites from "../../../records/component/favorites";
 import PokeIndex from "../../../index/component/pokeIndex";
 import Combination from "../../../battle/component/combination";
 
@@ -17,7 +17,7 @@ class Menu extends React.Component {
     };
     //変数を定義↓初期値
     //bindは他のファイルで使用する関数に対して当てるもので、propsで渡したい関数。
-    //recordなどで子コンポーネントで関数が使われているからbind必要
+    //recordなど子コンポーネントで関数が使われているからbind必要
     this.favoritesActive = this.favoritesActive.bind(this);
     this.indexActive = this.indexActive.bind(this);
     this.battleActive = this.battleActive.bind(this);
@@ -63,7 +63,7 @@ class Menu extends React.Component {
         <header>
           {isActive ? (
             //trueの時に画面遷移、それ以外（:）は何も起こらずそのまま（null）
-            <Read />
+            <Favorites />
           ) : null}
           {isIndex ? (
             <PokeIndex />
