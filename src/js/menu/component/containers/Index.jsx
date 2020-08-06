@@ -1,7 +1,7 @@
 import React from "react";
 import Favorites from "../../../records/component/favorites";
 import PokeIndex from "../../../index/component/pokeIndex";
-import Combination from "../../../../battle/component/combination";
+import Combination from "../../../battle/component/combination";
 
 class Index extends React.Component {
   render() {

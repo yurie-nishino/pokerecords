@@ -1,6 +1,6 @@
 import React from "react";
 
-class Combunation extends React.Component {
+class Combination extends React.Component {
 
   render() {
     return (
