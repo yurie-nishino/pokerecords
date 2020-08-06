@@ -7,7 +7,7 @@ class Records extends React.Component {
     console.log("index4");
     console.log(this.props)
     return (
-      <div>
+      <div className = {css.menu}>
         <button onClick={this.props.favoritesActive} className={css.fav_btn}>仲間ポケモン記録</button>
       </div>
     );

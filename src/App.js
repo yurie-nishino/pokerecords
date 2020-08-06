@@ -3,10 +3,8 @@ import './App.css';
 import Body from './Body';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
       <Body />
-      </header>
     </div>
   );
 }

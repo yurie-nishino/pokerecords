@@ -1,0 +1,22 @@
+.fav_btn{
+  background-color:white;
+  color: black;
+  border: 2px solid;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease 0.3s ;
+  padding:10px 40px ;
+  margin-bottom: 35px;
+}
+
+.fav_btn:hover{
+  background-color: black;
+  color: white;
+}
+
+.menu{
+  margin-top: 300px;
+  display: flex;
+  justify-content: center;
+}
