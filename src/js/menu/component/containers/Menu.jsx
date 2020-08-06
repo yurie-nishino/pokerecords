@@ -2,7 +2,7 @@ import React from "react";
 import Records from "../records";
 import Compatibility from "../compatibility";
 import Index from "../index";
-import Read from "./Read";
+import Favorites from "../../../records/component/favorites";
 import PokeIndex from "../../../index/component/pokeIndex";
 import Combination from "../../../battle/component/combination";
 
@@ -63,7 +63,7 @@ class Menu extends React.Component {
         <header>
           {isActive ? (
             //trueの時に画面遷移、それ以外（:）は何も起こらずそのまま（null）
-            <Read />
+            <Favorites />
           ) : null}
           {isIndex ? (
             <PokeIndex />
