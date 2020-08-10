@@ -19,50 +19,51 @@ class Forms extends React.Component {
       ballCount: "", // 使ったボールの数
       Submit: false, // 送信ボタン
     };
-    this.onFileSelect = this.onFileSelect.bind(this);//ファイル投稿フォームの初期値。bindは別のファイルで関数を使いたいから書いている。
-    this.nameChange = this.nameChange.bind(this)
-    this.placeChange = this.placeChange.bind(this)
-    this.ballTypeChange = this.ballTypeChange.bind(this)
-    this.ballCountChange = this.ballCountChange.bind(this)
-    this.hundleSubmit = this.hundleSubmit.bind(this) //送信ボタン
+    this.onFileSelect = this.onFileSelect.bind(this); //ファイル投稿フォームの初期値。bindは別のファイルで関数を使いたいから書いている。
+    this.nameChange = this.nameChange.bind(this);
+    this.placeChange = this.placeChange.bind(this);
+    this.ballTypeChange = this.ballTypeChange.bind(this);
+    this.ballCountChange = this.ballCountChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this); //送信ボタン
   }
 
-  
-
-
-  dispatchFileData(data) { // 送られてきたファイルの中身
+  dispatchFileData(data) {
+    // 送られてきたファイルの中身
     this.setState({
       fileData: data,
     });
   }
-  onFileSelect(file) {  //ボタンが押された時に発火する関数。そのなかでファイルを読み込むクラスを使っている。
+  onFileSelect(file) {
+    //ボタンが押された時に発火する関数。そのなかでファイルを読み込むクラスを使っている。
     const reader = new FileReader();
     reader.onload = () => {
-      this.dispatchFileData(reader.result);//読み込んだファイル内容を保存する関数に送っている
+      this.dispatchFileData(reader.result); //読み込んだファイル内容を保存する関数に送っている
     };
-    reader.readAsDataURL(file.target.files[0]);//疑問4 読み込んだファイルをURLで表示するように指示している
+    reader.readAsDataURL(file.target.files[0]); //疑問4 読み込んだファイルをURLで表示するように指示している
   }
 
   //テキストフォームの内容を読み込む？
-  nameChange(event){
-    this.setState({[event.target.name]:event.target.value});
+  nameChange(event) {
+    console.log(event.target);
+    this.setState({ name: event.target.value });
   }
 
-  placeChange(event){
-    this.setState({[event.target.place]:event.target.value});
+  placeChange(event) {
+    this.setState({ place: event.target.value });
   }
 
-  ballTypeChange(event){
-    this.setState({[event.target.ballChange]:event.target.value});
+  ballTypeChange(event) {
+    this.setState({ ballType: event.target.value });
   }
 
-  ballCountChange(event){
-    this.setState({[event.target.ballCount]:event.target.value});
+  ballCountChange(event) {
+    this.setState({ ballCount: event.target.value });
   }
 
   //内容をまとめて送信して表示？？
-  handleSubmit(event){
+  handleSubmit(event) {
     event.preventDefault();
+    console.log("testdayo");
     console.log(this.state);
   }
 
@@ -70,13 +71,13 @@ class Forms extends React.Component {
     console.log(this.state);
     return (
       <div className={css.form_box}>
-        <form > 
-          <Name nameChange={this.nameChange}/>
+        <form>
+          <Name nameChange={this.nameChange} />
           <Image onFileSelect={this.onFileSelect} />
           <Place placeChange={this.placeChange} />
-          <BallType ballTypeChange={this.ballTypeChange}/>
+          <BallType ballTypeChange={this.ballTypeChange} />
           <BallCount ballCountChange={this.ballCountChange} />
-          <Submit onSubmit={this.hundleSubmit} />
+          <Submit onSubmit={this.handleSubmit} />
         </form>
       </div>
     );

@@ -7,7 +7,7 @@ class Submit  extends React.Component {
   render() {
     return (
         <div>
-          <input type='submit'onClick={this.props.hundleSubmit} value='送信' className={css.submit_btn} />
+          <input type='submit'onClick={this.props.onSubmit} value='送信' className={css.submit_btn} />
         </div>
     );
   }

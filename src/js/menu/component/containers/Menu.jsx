@@ -3,7 +3,7 @@ import Records from "../records";
 import Compatibility from "../compatibility";
 import Index from "../index";
 import Favorites from "../../../records/component/favorites";
-import PokeIndex from "../../../index/component/pokeIndex";
+import PokeIndex from "../../../index/component/index";
 import Combination from "../../../battle/component/combination";
 
 class Menu extends React.Component {
