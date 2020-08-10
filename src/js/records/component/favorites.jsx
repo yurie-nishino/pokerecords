@@ -1,6 +1,6 @@
 import React from "react";
 import Friends from "./friends";
-import Forms from "../containers/Form.jsx";
+import Forms from "../containers/Form";
 
 class Favorites extends React.Component {
 
