@@ -39,10 +39,10 @@ class Forms extends React.Component {
     reader.onload = () => {
       this.dispatchFileData(reader.result); //読み込んだファイル内容を保存する関数に送っている
     };
-    reader.readAsDataURL(file.target.files[0]); //疑問4 読み込んだファイルをURLで表示するように指示している
+    reader.readAsDataURL(file.target.files[0]); //ファイルをURLで読み込む
   }
 
-  //テキストフォームの内容を読み込む？
+  //テキストフォームの内容を読み込む。stateを上書きする
   nameChange(event) {
     console.log(event.target);
     this.setState({ name: event.target.value });
@@ -60,10 +60,9 @@ class Forms extends React.Component {
     this.setState({ ballCount: event.target.value });
   }
 
-  //内容をまとめて送信して表示？？
+  //内容をまとめて送信して保存
   handleSubmit(event) {
     event.preventDefault();
-    console.log("testdayo");
     console.log(this.state);
   }
 
@@ -73,7 +72,7 @@ class Forms extends React.Component {
       <div className={css.form_box}>
         <form>
           <Name nameChange={this.nameChange} />
-          <Image onFileSelect={this.onFileSelect} />
+          <Image onFileSelect={this.onFileSelect} fileData={this.state.fileData} />
           <Place placeChange={this.placeChange} />
           <BallType ballTypeChange={this.ballTypeChange} />
           <BallCount ballCountChange={this.ballCountChange} />
