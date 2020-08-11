@@ -1,6 +1,6 @@
 import React from "react";
 import Friends from "./friends";
-import Form from "./form";
+import Forms from "../containers/Form";
 
 class Favorites extends React.Component {
 
@@ -9,7 +9,7 @@ class Favorites extends React.Component {
     return (
       <React.Fragment>
           <Friends />
-          <Form />
+          <Forms />
       </React.Fragment>
     );
   }

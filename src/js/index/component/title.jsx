@@ -1,5 +1,6 @@
 import React from "react";
-class PokeIndex extends React.Component {
+
+class Title extends React.Component {
   render() {
     console.log("index2");
     return (
@@ -10,4 +11,4 @@ class PokeIndex extends React.Component {
   }
 }
 
-export default PokeIndex;
+export default Title;

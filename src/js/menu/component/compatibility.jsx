@@ -1,5 +1,6 @@
 import React from "react";
 import css from "./compatibility.module.css";
+
 class Compatibility extends React.Component {
 
   render() {
