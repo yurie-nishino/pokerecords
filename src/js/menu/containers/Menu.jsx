@@ -5,7 +5,7 @@ import Index from "../component/index";
 import Record from "../../records/component/record";
 import PokeIndex from "../../index/component/index";
 
-import Combination from "../../battle/component/combination";
+import Combination from "../../compatibility/component/combination";
 
 class Menu extends React.Component {
   // 初期値設定

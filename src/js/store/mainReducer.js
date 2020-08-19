@@ -1,8 +1,8 @@
-import enter from 'js/home/modules/enterReducer';
-import menu from 'js/menu/modules/menuReducer';
-import records from 'js/menu/modules/recordsReducer';
-import index from 'js/menu/modules/indexReducr';
-import compatibility from 'js/menu/modules/compatibilityReducer';
+import enter from '../home/modules/enterReducer';
+import menu from '../menu/modules/menuReducer';
+import records from '../records/modules/recordsReducer';
+import index from '../index/modules/indexReducr';
+import compatibility from '../compatibility/component/modules/compatibilityReducer';
 
 export default {
   enter,

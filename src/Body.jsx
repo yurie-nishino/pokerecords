@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./js/home/component/home";
+import Home from "./js/home/containers/home";
 import Menu from "./js/menu/containers/Menu";
 class Body extends React.Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class Body extends React.Component {
     console.log(this.state.isRecordDisplayActive);
     return (
       <div>
-        {this.state.isRecordDisplayActive ? (
+        {this.props.isPushed ? (
           <Menu />
         ) : (
           <Home toggleActive={this.toggleActive} />
