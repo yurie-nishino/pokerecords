@@ -2,7 +2,7 @@ import React from "react";
 import Friends from "./friends";
 import Forms from "../containers/Form";
 
-class Favorites extends React.Component {
+class Record extends React.Component {
 
   render() {
     console.log("index3");
@@ -14,4 +14,4 @@ class Favorites extends React.Component {
     );
   }
 }
-export default Favorites;
+export default Record;

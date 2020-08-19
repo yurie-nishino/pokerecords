@@ -44,7 +44,6 @@ class Forms extends React.Component {
 
   //テキストフォームの内容を読み込む。stateを上書きする
   nameChange(event) {
-    console.log(event.target);
     this.setState({ name: event.target.value });
   }
 

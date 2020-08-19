@@ -1,11 +1,11 @@
 import React from "react";
-import Records from "../records";
-import Compatibility from "../compatibility";
-import Index from "../index";
-import Favorites from "../../../records/component/favorites";
-import PokeIndex from "../../../index/component/index";
+import Records from "../component/records";
+import Compatibility from "../component/compatibility";
+import Index from "../component/index";
+import Record from "../../records/component/record";
+import PokeIndex from "../../index/component/index";
 
-import Combination from "../../../battle/component/combination";
+import Combination from "../../battle/component/combination";
 
 class Menu extends React.Component {
   // 初期値設定
@@ -56,7 +56,7 @@ class Menu extends React.Component {
   render() {
     // ビューの部分（.jsx）
     console.log("-----------");
-    const { isActive } = this.state;
+    const { isActive } = this.state; //オブジェクトなので{}分割代入
     const { isIndex} = this.state;
     const { isBattle} = this.state;
     return (
@@ -64,7 +64,7 @@ class Menu extends React.Component {
         <header>
           {isActive ? (
             //trueの時に画面遷移、それ以外（:）は何も起こらずそのまま（null）
-            <Favorites />
+            <Record />
           ) : null}
           {isIndex ? (
             <PokeIndex />
