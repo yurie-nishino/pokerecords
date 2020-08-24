@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions'; //reduxとアクションを結びつけてる
-import * as TYPES from '../../../constants/actionTypes';
+import * as TYPES from '../../constants/actionTypes';
 
 const initialState = {
   status: {
@@ -9,7 +9,8 @@ const initialState = {
 
 const reducer = handleActions(
   {
-    [TYPES.COMPATIBILITY_BUTTON_PUSH]: (state) => {
+    [TYPES.INDEX_BUTTON_PUSH]: (state) => {
+      console.log('-------')
       const result = {
         ...state,
         status: {

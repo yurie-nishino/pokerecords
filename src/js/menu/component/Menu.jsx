@@ -1,8 +1,8 @@
 import React from "react";
-import Records from "../component/records";
-import Compatibility from "../component/compatibility";
-import Index from "../component/index";
-import Record from "../../records/component/record";
+import Records from "./records";
+import Compatibility from "./compatibility";
+import Index from "../../index/containers";
+import Record from "../../record/component/record";
 import PokeIndex from "../../index/component/index";
 
 import Combination from "../../compatibility/component/combination";
@@ -26,7 +26,6 @@ class Menu extends React.Component {
 
   favoritesActive() {
     //jsx側でonClickした時に呼び出される関数
-    console.log("test1");
     // ボタン押した時（true）
     this.setState({
       //変更する値（プロパティ）
@@ -36,7 +35,6 @@ class Menu extends React.Component {
 
   indexActive() {
     //ボタン押した時に呼び出される関数
-    console.log("test2");
     // ボタン押した時（true）
     this.setState({
       isIndex: !this.state.isIndex
@@ -45,7 +43,6 @@ class Menu extends React.Component {
 
   battleActive() {
     //ボタン押した時に呼び出される関数
-    console.log("test2");
     // ボタン押した時（true）
     this.setState({
       isBattle: !this.state.isBattle
@@ -54,11 +51,14 @@ class Menu extends React.Component {
 
 
   render() {
-    // ビューの部分（.jsx）
-    console.log("-----------");
+  
+    console.log("ーーーーーーーーーーーーthis.props");
+    console.log(this.props);
+    // ビューの部分（.jsx
     const { isActive } = this.state; //オブジェクトなので{}分割代入
     const { isIndex} = this.state;
     const { isBattle} = this.state;
+    const{isPushIndex} = this.props;
     return (
       <div>
         <header>
@@ -66,19 +66,19 @@ class Menu extends React.Component {
             //trueの時に画面遷移、それ以外（:）は何も起こらずそのまま（null）
             <Record />
           ) : null}
-          {isIndex ? (
+          { isPushIndex? (
             <PokeIndex />
           ) : null}
           {isBattle ? (
             <Combination />
           ) : null}
-          {!isIndex && !isActive && !isBattle ? (
+          {!isPushIndex && !isActive && !isBattle ? (
             //isIndex,isActive,isBattleがfalseの時↑
             //ここから始まる！！！
             //jsx側に渡し、onClickした時に{}が発動（今回は関数が引数になってる）↓
             <React.Fragment>
                 <Records favoritesActive={this.favoritesActive} />
-                <Index indexActive={this.indexActive}/>
+                <Index />
                 <Compatibility battleActive={this.battleActive} />
             </React.Fragment>
           ) : null}

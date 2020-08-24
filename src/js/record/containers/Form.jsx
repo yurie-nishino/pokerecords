@@ -62,11 +62,9 @@ class Forms extends React.Component {
   //内容をまとめて送信して保存
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className={css.form_box}>
         <form>

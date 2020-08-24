@@ -1,4 +1,4 @@
-import { handleActions } from 'redux-actions';
+import { handleActions } from 'redux-actions'; //reduxとアクションを結びつけてる
 import * as TYPES from '../../constants/actionTypes';
 
 const initialState = {
