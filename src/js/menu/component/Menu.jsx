@@ -1,19 +1,18 @@
 import React from "react";
-import Records from "./records";
-import Compatibility from "./compatibility";
-import Index from "../../index/containers";
-import Record from "../../record/component/record";
+import Records from "../record/component/records";
+import Compatibility from "../compatibility/component/compatibility";
+import Index from "../index/containers";
+import Forms from "../../recordForm/component/Form";
 import PokeIndex from "../../index/component/index";
-
-import Combination from "../../compatibility/component/combination";
+import Combination from "../../combination/component/combination";
 
 class Menu extends React.Component {
   // 初期値設定
   constructor(props) {
     super(props);
     this.state = {
-      isActive: false, //何も押してないからfalse
-      isIndex: false,
+      // isActive: false, //何も押してないからfalse
+      // isIndex: false,
       isBattle: false,
     };
     //変数を定義↓初期値
@@ -49,35 +48,33 @@ class Menu extends React.Component {
     });
   }
 
-
   render() {
   
     console.log("ーーーーーーーーーーーーthis.props");
     console.log(this.props);
     // ビューの部分（.jsx
-    const { isActive } = this.state; //オブジェクトなので{}分割代入
-    const { isIndex} = this.state;
+    const {ispushRecord} = this.state; //オブジェクトなので{}分割代入
     const { isBattle} = this.state;
     const{isPushIndex} = this.props;
     return (
       <div>
         <header>
-          {isActive ? (
+          {ispushRecord ? (
             //trueの時に画面遷移、それ以外（:）は何も起こらずそのまま（null）
-            <Record />
+            <Forms />
           ) : null}
-          { isPushIndex? (
+          { isPushIndex ? (
             <PokeIndex />
           ) : null}
           {isBattle ? (
             <Combination />
           ) : null}
-          {!isPushIndex && !isActive && !isBattle ? (
+          {!isPushIndex && !ispushRecord && !isBattle ? (
             //isIndex,isActive,isBattleがfalseの時↑
             //ここから始まる！！！
             //jsx側に渡し、onClickした時に{}が発動（今回は関数が引数になってる）↓
             <React.Fragment>
-                <Records favoritesActive={this.favoritesActive} />
+                <Records />
                 <Index />
                 <Compatibility battleActive={this.battleActive} />
             </React.Fragment>

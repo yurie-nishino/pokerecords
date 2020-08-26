@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./index.module.css";
 
-class MainMenu extends React.Component {
+class IndexButton extends React.Component {
 
   render() {
     console.log('this.props')
@@ -17,4 +17,4 @@ class MainMenu extends React.Component {
     );
   }
 }
-export default MainMenu;
+export default IndexButton;

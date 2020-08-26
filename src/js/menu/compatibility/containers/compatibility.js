@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ACTIONS from '../modules/enterAction';
-import Menu from '../../../../containers/Menu.jsx';
+import Menu from '../../containers/Menu.jsx';
 
 function mapStateToProps(state) {
   return {
