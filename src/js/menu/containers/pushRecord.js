@@ -1,13 +1,11 @@
 import { connect } from 'react-redux';
 // import ACTIONS from '../modules/enterAction';
-import Menu from '../menu/component/Menu.jsx';
+import Menu from '../component/Menu';
 
-//ポケモン記録(records)
+//ポケモン記録（pokeRecord）
 function mapStateToProps(state) {
-  console.log(state.record);
-  console.log(state.record.status);
   return {
-    ispushRecord: state.record.status.isPushed,
+    isPushRecord: state.record.status.isPushed,
   }
 }
 
@@ -16,5 +14,6 @@ function mapDispatchToProps(dispatch) {
     // pushEnter: () => dispatch(ACTIONS.pushEnter()),
   };
 }
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Menu);

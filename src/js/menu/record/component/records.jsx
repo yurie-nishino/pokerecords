@@ -1,9 +1,11 @@
 import React from "react";
 import css from "./records.module.css";
 
-class Records extends React.Component {
+class RecordButton extends React.Component {
 
   render() {
+    console.log('this.props')
+    console.log(this.props)
     const{
       pushRecord,
     } = this.props;
@@ -14,4 +16,4 @@ class Records extends React.Component {
     );
   }
 }
-export default Records;
+export default RecordButton;

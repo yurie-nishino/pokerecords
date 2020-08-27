@@ -4,8 +4,7 @@ import css from "./index.module.css";
 class IndexButton extends React.Component {
 
   render() {
-    console.log('this.props')
-    console.log(this.props)
+    
     const{
       pushIndex,
     } = this.props;

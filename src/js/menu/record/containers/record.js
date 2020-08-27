@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
-import ACTIONS from '../modules/enterAction';
-import Records from '../component/records';
+import ACTIONS from '../modules/recordAction';
+import RecordButton from '../component/records';
+
 function mapStateToProps(state) {
   return {
     isPush: state.record.status.isPush, //mainReducerの中のrecordを読み込み
@@ -13,5 +14,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(Records);
+export default connect(mapStateToProps, mapDispatchToProps)(RecordButton);

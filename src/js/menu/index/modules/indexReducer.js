@@ -10,7 +10,6 @@ const initialState = {
 const reducer = handleActions(
   {
     [TYPES.INDEX_BUTTON_PUSH]: (state) => {
-      console.log('-------')
       const result = {
         ...state,
         status: {

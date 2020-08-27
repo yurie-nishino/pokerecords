@@ -1,5 +1,5 @@
 import React from "react";
-import Records from "../record/component/records";
+import Record from "../record/containers";
 import Compatibility from "../compatibility/component/compatibility";
 import Index from "../index/containers";
 import Forms from "../../recordForm/component/Form";
@@ -50,8 +50,6 @@ class Menu extends React.Component {
 
   render() {
   
-    console.log("ーーーーーーーーーーーーthis.props");
-    console.log(this.props);
     // ビューの部分（.jsx
     const {ispushRecord} = this.state; //オブジェクトなので{}分割代入
     const { isBattle} = this.state;
@@ -59,7 +57,7 @@ class Menu extends React.Component {
     return (
       <div>
         <header>
-          {ispushRecord ? (
+          { ispushRecord ? (
             //trueの時に画面遷移、それ以外（:）は何も起こらずそのまま（null）
             <Forms />
           ) : null}
@@ -74,7 +72,7 @@ class Menu extends React.Component {
             //ここから始まる！！！
             //jsx側に渡し、onClickした時に{}が発動（今回は関数が引数になってる）↓
             <React.Fragment>
-                <Records />
+                <Record />
                 <Index />
                 <Compatibility battleActive={this.battleActive} />
             </React.Fragment>

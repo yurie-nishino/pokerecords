@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 // import ACTIONS from '../modules/enterAction';
-import Menu from '../component/Menu.jsx';
+import Menu from '../component/Menu';
+
 //ポケモン一覧（pokeIndex）
 function mapStateToProps(state) {
   return {
