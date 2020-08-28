@@ -1,19 +1,18 @@
 import React from "react";
-import Records from "../records";
-import Compatibility from "../compatibility";
-import Index from "../index";
-import Favorites from "../../../records/component/favorites";
-import PokeIndex from "../../../index/component/index";
-
-import Combination from "../../../battle/component/combination";
+import Record from "../record/containers/record";
+import Compatibility from "../compatibility/component/compatibility";
+import Index from "../index/containers";
+import Forms from "../../recordForm/component/Form";
+import PokeIndex from "../../index/component/index";
+import Combination from "../../combination/component/combination";
 
 class Menu extends React.Component {
   // 初期値設定
   constructor(props) {
     super(props);
     this.state = {
-      isActive: false, //何も押してないからfalse
-      isIndex: false,
+      // isActive: false, //何も押してないからfalse
+      // isIndex: false,
       isBattle: false,
     };
     //変数を定義↓初期値
@@ -26,7 +25,6 @@ class Menu extends React.Component {
 
   favoritesActive() {
     //jsx側でonClickした時に呼び出される関数
-    console.log("test1");
     // ボタン押した時（true）
     this.setState({
       //変更する値（プロパティ）
@@ -36,7 +34,6 @@ class Menu extends React.Component {
 
   indexActive() {
     //ボタン押した時に呼び出される関数
-    console.log("test2");
     // ボタン押した時（true）
     this.setState({
       isIndex: !this.state.isIndex
@@ -45,40 +42,38 @@ class Menu extends React.Component {
 
   battleActive() {
     //ボタン押した時に呼び出される関数
-    console.log("test2");
     // ボタン押した時（true）
     this.setState({
       isBattle: !this.state.isBattle
     });
   }
 
-
   render() {
-    // ビューの部分（.jsx）
-    console.log("-----------");
-    const { isActive } = this.state;
-    const { isIndex} = this.state;
+  
+    // ビューの部分（.jsx
+    const {ispushRecord} = this.state; //オブジェクトなので{}分割代入
     const { isBattle} = this.state;
+    const{isPushIndex} = this.props;
     return (
       <div>
         <header>
-          {isActive ? (
+          { ispushRecord ? (
             //trueの時に画面遷移、それ以外（:）は何も起こらずそのまま（null）
-            <Favorites />
+            <Forms />
           ) : null}
-          {isIndex ? (
+          { isPushIndex ? (
             <PokeIndex />
           ) : null}
           {isBattle ? (
             <Combination />
           ) : null}
-          {!isIndex && !isActive && !isBattle ? (
+          {!isPushIndex && !ispushRecord && !isBattle ? (
             //isIndex,isActive,isBattleがfalseの時↑
             //ここから始まる！！！
             //jsx側に渡し、onClickした時に{}が発動（今回は関数が引数になってる）↓
             <React.Fragment>
-                <Records favoritesActive={this.favoritesActive} />
-                <Index indexActive={this.indexActive}/>
+                <Record />
+                <Index />
                 <Compatibility battleActive={this.battleActive} />
             </React.Fragment>
           ) : null}

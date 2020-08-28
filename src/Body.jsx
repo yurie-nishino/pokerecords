@@ -1,10 +1,8 @@
 import React from "react";
-import Home from "./js/home/component/home";
-import Menu from "./js/menu/component/containers/Menu";
-
+import Home from "./js/home/containers/home";
+import Menu from "./js/menu/containers/menu";
 class Body extends React.Component {
   constructor(props) {
-    console.log("toggleActive1");
     super(props);
     this.state = {
       isRecordDisplayActive: false,
@@ -13,21 +11,15 @@ class Body extends React.Component {
   }
 
   toggleActive() {
-    console.log("toggleActive2");
-    console.log(this.state.isRecordDisplayActive);
     this.setState({
       isRecordDisplayActive: !this.state.isRecordDisplayActive,
     });
-    console.log("toggleActive2_1");
-    console.log(this.state.isRecordDisplayActive);
   }
 
   render() {
-    console.log('----------');
-    console.log(this.state.isRecordDisplayActive);
     return (
       <div>
-        {this.state.isRecordDisplayActive ? (
+        {this.props.isPushed ? (
           <Menu />
         ) : (
           <Home toggleActive={this.toggleActive} />

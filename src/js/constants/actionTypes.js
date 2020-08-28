@@ -1,0 +1,6 @@
+export const ENTER_BUTTON_PUSH = 'ENTER_BUTTON_PUSH';//はじめにクリックするアクションの宣言！
+export const RECORD_BUTTON_PUSH = 'RECORD_BUTTON_PUSH';
+export const INDEX_BUTTON_PUSH = 'INDEX_BUTTON_PUSH';
+export const COMPATIBILITY_BUTTON_PUSH = 'BATTLE_BUTTON_PUSH';
+
+

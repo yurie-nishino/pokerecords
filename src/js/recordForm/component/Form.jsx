@@ -1,11 +1,12 @@
 import React from "react";
 import css from "../component/form.module.css";
-import Name from "../component/name";
-import Image from "../component/image";
-import Place from "../component/place";
-import BallType from "../component/ballType";
-import BallCount from "../component/ballCount";
-import Submit from "../component/submit";
+import Friends from "./friends";
+import Name from "./name";
+import Image from "./image";
+import Place from "./place";
+import BallType from "./ballType";
+import BallCount from "./ballCount";
+import Submit from "./submit";
 
 class Forms extends React.Component {
   constructor(props) {
@@ -44,7 +45,6 @@ class Forms extends React.Component {
 
   //テキストフォームの内容を読み込む。stateを上書きする
   nameChange(event) {
-    console.log(event.target);
     this.setState({ name: event.target.value });
   }
 
@@ -63,14 +63,13 @@ class Forms extends React.Component {
   //内容をまとめて送信して保存
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className={css.form_box}>
         <form>
+          <Friends />
           <Name nameChange={this.nameChange} />
           <Image onFileSelect={this.onFileSelect} fileData={this.state.fileData} />
           <Place placeChange={this.placeChange} />
