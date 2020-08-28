@@ -1,5 +1,5 @@
 import React from "react";
-import Record from "../record/containers";
+import Record from "../record/containers/record";
 import Compatibility from "../compatibility/component/compatibility";
 import Index from "../index/containers";
 import Forms from "../../recordForm/component/Form";
