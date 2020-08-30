@@ -18,12 +18,12 @@ class Menu extends React.Component {
     //変数を定義↓初期値
     //bindは他のファイルで使用する関数に対して当てるもので、propsで渡したい関数。
     //recordなど子コンポーネントで関数が使われているからbind必要
-    this.favoritesActive = this.favoritesActive.bind(this);
+    this.recordActive = this.recordActive.bind(this);
     this.indexActive = this.indexActive.bind(this);
     this.battleActive = this.battleActive.bind(this);
   }
 
-  favoritesActive() {
+  recordActive() {
     //jsx側でonClickした時に呼び出される関数
     // ボタン押した時（true）
     this.setState({
@@ -51,13 +51,13 @@ class Menu extends React.Component {
   render() {
   
     // ビューの部分（.jsx
-    const {ispushRecord} = this.state; //オブジェクトなので{}分割代入
+    const {isPushRecord} = this.props; //オブジェクトなので{}分割代入
     const { isBattle} = this.state;
     const{isPushIndex} = this.props;
     return (
       <div>
         <header>
-          { ispushRecord ? (
+          { isPushRecord ? (
             //trueの時に画面遷移、それ以外（:）は何も起こらずそのまま（null）
             <Forms />
           ) : null}
@@ -67,7 +67,7 @@ class Menu extends React.Component {
           {isBattle ? (
             <Combination />
           ) : null}
-          {!isPushIndex && !ispushRecord && !isBattle ? (
+          {!isPushIndex && !isPushRecord && !isBattle ? (
             //isIndex,isActive,isBattleがfalseの時↑
             //ここから始まる！！！
             //jsx側に渡し、onClickした時に{}が発動（今回は関数が引数になってる）↓
