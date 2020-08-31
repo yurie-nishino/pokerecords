@@ -7,9 +7,12 @@ const initialState = {
   },
 };
 
+//recordボタンのアクション結果を返す
 const reducer = handleActions(
   {
     [TYPES.RECORD_BUTTON_PUSH]: (state) => {
+      console.log('state');
+      console.log(state);
       const result = {
         ...state,
         status: {

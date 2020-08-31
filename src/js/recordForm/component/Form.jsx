@@ -10,8 +10,10 @@ import Submit from "./submit";
 
 class Forms extends React.Component {
   constructor(props) {
+    console.log("this_prpos");
     //初期値の設定
     super(props);
+    console.log(this.props);
     this.state = {
       fileData: "", //イメージ
       name: "", // ポケモンの名前
