@@ -1,26 +1,28 @@
 import React from "react";
 // import css from "./record.module.css";
+import IconButton from '@material-ui/core/IconButton';
+import PhotoCamera from '@material-ui/icons/PhotoCamera';
+
 
 class Image extends React.Component {
   render() {
     return (
       <div>
         <p>写真</p>
-        <label>
           <input
             onChange={(file) => this.props.onFileSelect(file)}
             type="file"
             id="file-input"
             style={{ display: "none" }}
           />
-          <div
-            style={{ borderStyle: 'solid', borderWidth: '3px'}}
-          >
-            test
-          </div>
+        <label htmlFor="icon-button-file">
+          <IconButton color="primary" aria-label="upload picture" component="span">
+            <PhotoCamera />
+          </IconButton>
         </label>
       </div>
     );
   }
 }
 export default Image;
+

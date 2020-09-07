@@ -1,12 +1,13 @@
 import React from "react";
 import css from "../component/form.module.css";
-import Friends from "./friends";
-import Name from "./name";
-import Image from "./image";
-import Place from "./place";
-import BallType from "./ballType";
-import BallCount from "./ballCount";
-import Submit from "./submit";
+// import PropTypes from "prop-types";
+import Friends from "../friends/compnent/friends";
+import Name from "../name/component/name";
+import Image from "../photo/component/image";
+import Place from "../place/component/place";
+import BallType from "../ballType/component/ballType";
+import BallCount from "../ballCount/component/ballCount";
+import Submit from "../submit/component/submit";
 
 class Forms extends React.Component {
   constructor(props) {
@@ -29,6 +30,9 @@ class Forms extends React.Component {
     this.ballCountChange = this.ballCountChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this); //送信ボタン
   }
+
+
+
 
   dispatchFileData(data) {
     // 送られてきたファイルの中身

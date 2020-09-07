@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import ACTIONS from '../modules/enterAction';
-import Menu from '../../containers/menu.js';
+import ACTIONS from '../modules/compatibilityAction';
+import CompatibilityButton from '../component/compatibility';
 
 function mapStateToProps(state) {
   return {
@@ -14,4 +14,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Menu);
+export default connect(mapStateToProps, mapDispatchToProps)(CompatibilityButton);

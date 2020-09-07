@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./compatibility.module.css";
 
-class Compatibility extends React.Component {
+class CompatibilityButton extends React.Component {
 
   render() {
     const{
@@ -14,5 +14,5 @@ class Compatibility extends React.Component {
     );
   }
 }
-export default Compatibility;
+export default CompatibilityButton;
 

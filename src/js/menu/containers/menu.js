@@ -7,6 +7,7 @@ function mapStateToProps(state) {
   return {
     isPushRecord: state.record.status.isPushed,
     isPushIndex: state.index.status.isPushed,
+    isPushCompatibility: state.compatibility.status.isPushed,
   }
 }
 // isPushRecordは、recordReducerの処理を返す。stateの中のrecord（mainReducer）のstatus(状態)がisPushed（）のTrue or Falseの状態を返す

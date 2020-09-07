@@ -1,6 +1,6 @@
 import React from "react";
 import Record from "../record/containers/record";
-import Compatibility from "../compatibility/component/compatibility";
+import Compatibility from "../compatibility/containers/compatibility";
 import Index from "../index/containers";
 import Forms from "../../recordForm/component/Form";
 import PokeIndex from "../../index/component/index";
@@ -13,14 +13,14 @@ class Menu extends React.Component {
     this.state = {
       // isActive: false, //何も押してないからfalse
       // isIndex: false,
-      isBattle: false,
+      // isBattle: false,
     };
     //変数を定義↓初期値
     //bindは他のファイルで使用する関数に対して当てるもので、propsで渡したい関数。
     //recordなど子コンポーネントで関数が使われているからbind必要
     this.recordActive = this.recordActive.bind(this);
     this.indexActive = this.indexActive.bind(this);
-    this.battleActive = this.battleActive.bind(this);
+    this.compatibilityActive = this.compatibilityActive.bind(this);
   }
 
   recordActive() {
@@ -40,11 +40,11 @@ class Menu extends React.Component {
     });
   }
 
-  battleActive() {
+  compatibilityActive() {
     //ボタン押した時に呼び出される関数
     // ボタン押した時（true）
     this.setState({
-      isBattle: !this.state.isBattle
+      isCompatybility: !this.state.isCompatybility
     });
   }
 
@@ -52,7 +52,7 @@ class Menu extends React.Component {
   
     // ビューの部分（.jsx
     const {isPushRecord} = this.props; //オブジェクトなので{}分割代入
-    const { isBattle} = this.state;
+    const {isPushCompatibility} = this.props;
     const{isPushIndex} = this.props;
     return (
       <div>
@@ -64,17 +64,17 @@ class Menu extends React.Component {
           { isPushIndex ? (
             <PokeIndex />
           ) : null}
-          {isBattle ? (
+          {isPushCompatibility ? (
             <Combination />
           ) : null}
-          {!isPushIndex && !isPushRecord && !isBattle ? (
+          {!isPushIndex && !isPushRecord && !isPushCompatibility ? (
             //isIndex,isActive,isBattleがfalseの時↑
             //ここから始まる！！！
             //jsx側に渡し、onClickした時に{}が発動（今回は関数が引数になってる）↓
             <React.Fragment>
                 <Record />
                 <Index />
-                <Compatibility battleActive={this.battleActive} />
+                <Compatibility />
             </React.Fragment>
           ) : null}
         </header>

@@ -1,15 +1,19 @@
 import React from "react";
 import Title from "./title"
-import PokeMain from "./main";
+import PokeName from "../name/component/name";
+import PokeImage from "../photo/component/image";
+// import PokeMain from "../main/component/main";
 class PokeIndex extends React.Component {
   render() {
     return (
       <div>
         <Title />
-        <PokeMain />
+        <PokeName />
+        <PokeImage />
       </div>
     );
   }
 }
 
 export default PokeIndex;
+
