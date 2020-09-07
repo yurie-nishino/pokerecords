@@ -13,7 +13,8 @@ class Home extends React.Component {
           <h1> 
             Pokemon <span>Records</span>
           </h1>
-          <Button variant="contained" color="primary" onClick={pushEnter} className={css.record_btn}>Records(記録する)</Button>
+          <Button variant="contained" color="primary" className={css.record_btn}>Sign Up</Button>
+          <Button variant="contained" color="primary" onClick={pushEnter} className={css.record_btn}>Sign In</Button>
         </div>
       </React.Fragment>
     );
