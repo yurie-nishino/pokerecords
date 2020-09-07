@@ -1,22 +1,25 @@
 import React from "react";
 // import css from "./record.module.css";
-import IconButton from '@material-ui/core/IconButton';
-import PhotoCamera from '@material-ui/icons/PhotoCamera';
-
+import IconButton from "@material-ui/core/IconButton";
+import PhotoCamera from "@material-ui/icons/PhotoCamera";
 
 class Image extends React.Component {
   render() {
     return (
       <div>
-        <p>写真</p>
+        <label>
+          <p>写真</p>
           <input
             onChange={(file) => this.props.onFileSelect(file)}
             type="file"
             id="file-input"
             style={{ display: "none" }}
           />
-        <label htmlFor="icon-button-file">
-          <IconButton color="primary" aria-label="upload picture" component="span">
+          <IconButton
+            color="primary"
+            aria-label="upload picture"
+            component="span"
+          >
             <PhotoCamera />
           </IconButton>
         </label>
@@ -25,4 +28,3 @@ class Image extends React.Component {
   }
 }
 export default Image;
-
