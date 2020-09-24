@@ -1,5 +1,17 @@
 import React from "react";
-import css from "./records.module.css";
+// import css from "./records.module.css";
+import Button from '@material-ui/core/Button';
+import { styled } from '@material-ui/core/styles';
+
+const RecordsButton = styled(Button)({
+  borderRadius: 30,
+  color: "#282c34",
+  backgroundColor: "#8ed8fa",
+  margin: "0 auto",
+  marginTop: 30,
+  display: "flex",
+  justifyContent:"center"
+});
 
 class RecordButton extends React.Component {
 
@@ -10,8 +22,8 @@ class RecordButton extends React.Component {
       pushRecord,
     } = this.props;
     return (
-      <div className = {css.menu}>
-        <button onClick={pushRecord} className={css.fav_btn}>仲間ポケモン記録</button>
+      <div>
+        <RecordsButton variant="contained" onClick={pushRecord} >仲間ポケモン記録</RecordsButton>
       </div>
     );
   }

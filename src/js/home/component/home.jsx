@@ -5,6 +5,9 @@ import { styled } from '@material-ui/core/styles';
 
 const MyButton = styled(Button)({
   borderRadius: 30,
+  color: "#282c34",
+  backgroundColor: "#8ed8fa",
+  marginBottom: "30px",
 });
 
 class Home extends React.Component {
@@ -19,11 +22,13 @@ class Home extends React.Component {
           <h1> 
             Pokemon <span>Records</span>
           </h1>
-          <MyButton variant="contained" color="primary" className={css.record_btn}>Sign Up</MyButton>
-          <MyButton variant="contained" color="primary" onClick={pushEnter} className={css.record_btn}>Sign In</MyButton>
+          <MyButton variant="contained" >Sign Up</MyButton>
+          <MyButton variant="contained" onClick={pushEnter}>Sign In</MyButton>
         </div>
       </React.Fragment>
     );
   }
 }
+
+
 export default Home;
