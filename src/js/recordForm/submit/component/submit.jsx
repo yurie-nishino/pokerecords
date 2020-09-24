@@ -8,7 +8,7 @@ const SubmitButton = styled(Button)({
   borderRadius: 30,
   color: "#282c34",
   backgroundColor: "#8ed8fa",
-  marginTop: "30px",
+  marginTop: "50px",
 });
 
 class Submit  extends React.Component {

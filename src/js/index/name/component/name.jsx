@@ -4,7 +4,7 @@ class PokeName extends React.Component {
   render() {
     return (
       <div>
-        <p>投稿したポケモンの名前</p>
+        <p>イーブイ</p>
       </div>
     );
   }
